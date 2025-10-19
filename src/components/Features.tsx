@@ -14,22 +14,26 @@ const Features = () => {
               {
                 icon: Smartphone,
                 title: "Slimme Technologie",
-                description: "Moderne systemen voor senioren."
+                descriptionMobile: "Moderne systemen voor senioren.",
+                descriptionDesktop: "Moderne en gebruiksvriendelijke systemen die eenvoudig te bedienen zijn. Al onze oplossingen zijn getest in de praktijk en ontworpen voor senioren."
               },
               {
                 icon: Clock,
                 title: "24/7 Bereikbaar",
-                description: "Altijd hulp en ondersteuning."
+                descriptionMobile: "Altijd bereikbaar.",
+                descriptionDesktop: "Dag en nacht bereikbaar voor hulp en ondersteuning. Ons team staat altijd klaar om snel te reageren op elke situatie, waar en wanneer u ons nodig heeft."
               },
               {
                 icon: Users,
                 title: "Persoonlijke Aanpak",
-                description: "Past bij uw levensstijl."
+                descriptionMobile: "Past bij u.",
+                descriptionDesktop: "Elke situatie is uniek. We luisteren naar uw behoeften en bieden oplossingen die perfect aansluiten bij uw levensstijl en wensen."
               },
               {
                 icon: HeadphonesIcon,
                 title: "Professionele Support",
-                description: "Training door specialisten."
+                descriptionMobile: "Training door experts.",
+                descriptionDesktop: "Installatie, training en continue ondersteuning door ervaren specialisten. We zorgen ervoor dat u en uw familie zich veilig voelen."
               }
             ].map((feature, index) => {
               const Icon = feature.icon;
@@ -44,7 +48,8 @@ const Features = () => {
                   </div>
                   <div className="space-y-2">
                     <h3 className="text-lg md:text-xl font-semibold text-foreground">{feature.title}</h3>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{feature.description}</p>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed md:hidden">{feature.descriptionMobile}</p>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed hidden md:block">{feature.descriptionDesktop}</p>
                   </div>
                 </div>
               );

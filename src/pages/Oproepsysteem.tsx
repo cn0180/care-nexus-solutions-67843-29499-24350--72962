@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import { CheckCircle2, Phone, Clock, Shield, Bell } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import oproepBewonerAlarmImage from "@/assets/oproep-elderly-pendant.jpg";
-import oproepResponseImage from "@/assets/oproep-response.jpg";
+import oproepBewonerAlarmImage from "@/assets/oproep-elderly-hands.jpg";
+import oproepResponseImage from "@/assets/oproep-care-response.jpg";
 const Oproepsysteem = () => {
   return <div className="min-h-screen">
       <Navigation />
