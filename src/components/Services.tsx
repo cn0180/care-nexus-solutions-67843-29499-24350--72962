@@ -17,13 +17,6 @@ const Services = () => {
       link: "/gps-tracking"
     },
     {
-      icon: Building2,
-      title: "Infrastructuur Advies",
-      description: "Technische aanpassingen voor een veilige thuisomgeving",
-      image: infrastructuurImage,
-      link: "/infrastructuur"
-    },
-    {
       icon: Home,
       title: "Thuiszorg Oplossingen",
       description: "Slimme technologie voor zelfstandig leven",
@@ -36,6 +29,13 @@ const Services = () => {
       description: "24/7 bereikbaar met persoonlijke alarmering",
       image: oproepsysteemImage,
       link: "/oproepsysteem"
+    },
+    {
+      icon: Building2,
+      title: "Infrastructuur Advies",
+      description: "Technische aanpassingen voor een veilige thuisomgeving",
+      image: infrastructuurImage,
+      link: "/infrastructuur"
     }
   ];
 

@@ -4,6 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
+import CookiesDialog from "@/components/CookiesDialog";
+import TermsDialog from "@/components/TermsDialog";
+import AboutDialog from "@/components/AboutDialog";
 import Index from "./pages/Index";
 import GpsTracking from "./pages/GpsTracking";
 import Infrastructuur from "./pages/Infrastructuur";
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookiesDialog />
+        <TermsDialog />
+        <AboutDialog />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -4,9 +4,6 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
-import CookiesDialog from "@/components/CookiesDialog";
-import TermsDialog from "@/components/TermsDialog";
-import AboutDialog from "@/components/AboutDialog";
 
 const Index = () => {
   return (
@@ -17,9 +14,6 @@ const Index = () => {
       <Features />
       <About />
       <Footer />
-      <CookiesDialog />
-      <TermsDialog />
-      <AboutDialog />
     </div>
   );
 };
