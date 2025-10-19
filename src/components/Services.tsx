@@ -57,7 +57,7 @@ const Services = () => {
             return (
               <Card 
                 key={index} 
-                className="bg-card hover:shadow-elevated transition-all duration-300 border-border overflow-hidden animate-fade-in"
+                className="bg-card hover:shadow-elevated transition-all duration-300 border-border overflow-hidden animate-fade-in flex flex-col"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="aspect-video w-full overflow-hidden">
@@ -71,11 +71,11 @@ const Services = () => {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <CardTitle className="text-2xl text-foreground">{service.title}</CardTitle>
+                  <CardTitle className="text-lg md:text-2xl text-foreground">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">{service.description}</p>
-                  <Link to={service.link}>
+                <CardContent className="flex-1 flex flex-col space-y-4">
+                  <p className="text-sm md:text-base text-muted-foreground flex-1">{service.description}</p>
+                  <Link to={service.link} className="mt-auto">
                     <Button variant="default" className="w-full">
                       Meer Info
                       <ArrowRight className="ml-2 h-4 w-4" />

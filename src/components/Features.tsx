@@ -14,22 +14,22 @@ const Features = () => {
               {
                 icon: Smartphone,
                 title: "Slimme Technologie",
-                description: "Moderne en gebruiksvriendelijke systemen die eenvoudig te bedienen zijn. Al onze oplossingen zijn getest in de praktijk en ontworpen voor senioren."
+                description: "Moderne en gebruiksvriendelijke systemen voor senioren."
               },
               {
                 icon: Clock,
                 title: "24/7 Bereikbaar",
-                description: "Dag en nacht bereikbaar voor hulp en ondersteuning. Ons team staat altijd klaar om snel te reageren op elke situatie, waar en wanneer u ons nodig heeft."
+                description: "Dag en nacht bereikbaar voor hulp en ondersteuning."
               },
               {
                 icon: Users,
                 title: "Persoonlijke Aanpak",
-                description: "Elke situatie is uniek. We luisteren naar uw behoeften en bieden oplossingen die perfect aansluiten bij uw levensstijl en wensen."
+                description: "Oplossingen die perfect aansluiten bij uw levensstijl."
               },
               {
                 icon: HeadphonesIcon,
                 title: "Professionele Support",
-                description: "Installatie, training en continue ondersteuning door ervaren specialisten. We zorgen ervoor dat u en uw familie zich veilig voelen."
+                description: "Installatie, training en ondersteuning door specialisten."
               }
             ].map((feature, index) => {
               const Icon = feature.icon;
@@ -43,8 +43,8 @@ const Features = () => {
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold text-foreground">{feature.title}</h3>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
               );
