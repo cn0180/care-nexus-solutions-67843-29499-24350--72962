@@ -14,7 +14,7 @@ const Features = () => {
               {
                 icon: Smartphone,
                 title: "Slimme Technologie",
-                descriptionMobile: "Moderne systemen voor senioren.",
+                descriptionMobile: "Moderne systemen.",
                 descriptionDesktop: "Moderne en gebruiksvriendelijke systemen die eenvoudig te bedienen zijn. Al onze oplossingen zijn getest in de praktijk en ontworpen voor senioren."
               },
               {

@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { CheckCircle2, Lightbulb, Home, Accessibility } from "lucide-react";
 import infrastructuurImage from "@/assets/infrastructuur.jpg";
 import infrastructuurTechnicalImage from "@/assets/infrastructuur-technical.jpg";
-import infrastructuurDatacenterImage from "@/assets/infrastructuur-datacenter.png";
+import infrastructuurInstallationImage from "@/assets/infrastructuur-installation.jpg";
 
 const Infrastructuur = () => {
   return (
@@ -106,7 +106,7 @@ const Infrastructuur = () => {
                 </div>
                 <div>
                   <img 
-                    src={infrastructuurDatacenterImage} 
+                    src={infrastructuurInstallationImage} 
                     alt="Technische oplossingen" 
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
