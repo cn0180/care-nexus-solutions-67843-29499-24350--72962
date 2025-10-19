@@ -14,22 +14,22 @@ const Features = () => {
               {
                 icon: Smartphone,
                 title: "Slimme Technologie",
-                description: "Moderne en gebruiksvriendelijke systemen voor senioren."
+                description: "Moderne systemen voor senioren."
               },
               {
                 icon: Clock,
                 title: "24/7 Bereikbaar",
-                description: "Dag en nacht bereikbaar voor hulp en ondersteuning."
+                description: "Altijd hulp en ondersteuning."
               },
               {
                 icon: Users,
                 title: "Persoonlijke Aanpak",
-                description: "Oplossingen die perfect aansluiten bij uw levensstijl."
+                description: "Past bij uw levensstijl."
               },
               {
                 icon: HeadphonesIcon,
                 title: "Professionele Support",
-                description: "Installatie, training en ondersteuning door specialisten."
+                description: "Training door specialisten."
               }
             ].map((feature, index) => {
               const Icon = feature.icon;
