@@ -48,7 +48,7 @@ const Footer = () => {
             <div>
               <h3 className="font-semibold text-base mb-3">Contact</h3>
               <ul className="space-y-2 text-sm text-secondary-foreground/80">
-                <li>+31 (0)20 123 4567</li>
+                <li>+31 6 86433700</li>
                 <li>info@care-nexus.nl</li>
                 <li>Nederland</li>
               </ul>
