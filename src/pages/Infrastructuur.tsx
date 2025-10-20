@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { CheckCircle2, Lightbulb, Home, Accessibility } from "lucide-react";
 import infrastructuurImage from "@/assets/infrastructuur.jpg";
-import infrastructuurTechnicalImage from "@/assets/infrastructuur-technical.jpg";
+import infrastructuurDatacenterImage from "@/assets/infrastructuur-datacenter.png";
 import infrastructuurInstallationImage from "@/assets/infrastructuur-installation.jpg";
 
 const Infrastructuur = () => {
@@ -15,7 +15,7 @@ const Infrastructuur = () => {
           <div className="animate-fade-in-up space-y-12">
             {/* Header */}
             <div className="text-center space-y-4">
-              <h1 className="text-5xl font-bold text-foreground">Technisch Infrastructuur Advies</h1>
+              <h1 className="text-5xl font-bold text-foreground">Infrastructuur</h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Professionele begeleiding bij technische inrichting en slimme aanpassingen
               </p>
@@ -27,7 +27,7 @@ const Infrastructuur = () => {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div className="order-2 md:order-1">
                   <img 
-                    src={infrastructuurTechnicalImage} 
+                    src={infrastructuurDatacenterImage} 
                     alt="Infrastructuur voor ouderenzorg" 
                     className="w-full h-64 object-cover rounded-lg shadow-lg"
                   />
