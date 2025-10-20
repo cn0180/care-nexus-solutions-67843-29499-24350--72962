@@ -50,6 +50,15 @@ const AboutDialog = () => {
           </div>
         </div>
 
+        <div className="mt-6 pt-6 border-t border-border">
+          <h3 className="font-semibold text-foreground mb-3">Heeft u nog vragen over ons?</h3>
+          <div className="space-y-2 text-sm text-muted-foreground">
+            <p>Neem gerust contact met ons op:</p>
+            <p className="font-medium text-foreground">+31 6 86433700</p>
+            <p>info@care-nexus.nl</p>
+          </div>
+        </div>
+
         <div className="mt-6 flex justify-end">
           <button
             onClick={() => (document.getElementById('about-dialog') as HTMLDialogElement)?.close()}
