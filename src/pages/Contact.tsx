@@ -40,7 +40,7 @@ const Contact = () => {
             {/* Contact Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: Phone, title: "Telefoon", value: "+31 (0)20 123 4567" },
+                { icon: Phone, title: "Telefoon", value: "+31 6 86433700" },
                 { icon: Mail, title: "Email", value: "info@care-nexus.nl" },
                 { icon: MapPin, title: "Locatie", value: "Nederland" }
               ].map((item, i) => {
