@@ -46,7 +46,9 @@ const GpsTracking = () => {
                       "24/7 real-time tracking",
                       "Veilige zone meldingen",
                       "Discrete draagbare apparaten",
-                      "Lange batterijduur"
+                      "Lange batterijduur",
+                      "24/7 basis support",
+                      "24/7 volledig beheer"
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
