@@ -16,7 +16,7 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+
     e.preventDefault();
     toast.success("Bedankt! We nemen zo spoedig mogelijk contact met u op.");
     setFormData({ name: "", email: "", phone: "", message: "" });
