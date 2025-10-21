@@ -4,25 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, Mail, MapPin, Clock, Shield, Brain } from "lucide-react";
-import { useState } from "react";
-import { toast } from "sonner";
+import { Phone, Mail, MapPin, Shield, Brain } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
-
- 
-
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-7xl space-y-12 animate-fade-in-up">
@@ -74,7 +62,7 @@ const Contact = () => {
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-border">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
@@ -97,79 +85,37 @@ const Contact = () => {
                 <CardTitle className="text-2xl">Stuur een bericht</CardTitle>
               </CardHeader>
               <CardContent>
-                
-              <form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  className="space-y-4"
->
-  <input type="hidden" name="form-name" value="contact" />
-  <p hidden>
-    <label>Laat dit veld leeg: <input name="bot-field" /></label>
-  </p>
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  className="space-y-4"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p hidden>
+                    <label>Laat dit veld leeg: <input name="bot-field" /></label>
+                  </p>
 
-  <Input name="name" placeholder="Uw naam" required />
-  <Input type="email" name="email" placeholder="Uw email" required />
-  <Input type="tel" name="phone" placeholder="Uw telefoonnummer" required />
-  <Textarea name="message" placeholder="Uw vraag" required rows={6} />
+                  <Input name="name" placeholder="Uw naam" required />
+                  <Input type="email" name="email" placeholder="Uw email" required />
+                  <Input type="tel" name="phone" placeholder="Uw telefoonnummer" required />
+                  <Textarea name="message" placeholder="Uw vraag over technische oplossingen" required rows={6} />
 
-  <Button type="submit" className="w-full bg-primary text-primary-foreground">
-    Verstuur Bericht
-  </Button>
-</form>
-
-  <Input name="name" placeholder="Uw naam" required />
-  <Input type="email" name="email" placeholder="Uw email" required />
-  <Input type="tel" name="phone" placeholder="Uw telefoonnummer" required />
-  <Textarea name="message" placeholder="Uw vraag" required rows={6} />
-
-  <Button type="submit" className="w-full bg-primary text-primary-foreground">
-    Verstuur Bericht
-  </Button>
-</form>
-                  <Input
-                    placeholder="Uw naam"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
-                  />
-                  <Input
-                    type="email"
-                    placeholder="Uw email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    required
-                  />
-                  <Input
-                    type="tel"
-                    placeholder="Uw telefoonnummer"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    required
-                  />
-                  <Textarea
-                    placeholder="Uw vraag over technische oplossingen"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                    rows={6}
-                  />
                   <Button type="submit" className="w-full bg-primary text-primary-foreground">
                     Verstuur Bericht
                   </Button>
                 </form>
               </CardContent>
             </Card>
+
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
 };
 
 export default Contact;
-
