@@ -17,10 +17,7 @@ const Contact = () => {
   });
 
 
-    e.preventDefault();
-    toast.success("Bedankt! We nemen zo spoedig mogelijk contact met u op.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
+ 
 
   return (
     <div className="min-h-screen">
@@ -100,7 +97,8 @@ const Contact = () => {
                 <CardTitle className="text-2xl">Stuur een bericht</CardTitle>
               </CardHeader>
               <CardContent>
-               <form
+                
+              <form
   name="contact"
   method="POST"
   data-netlify="true"
@@ -111,6 +109,16 @@ const Contact = () => {
   <p hidden>
     <label>Laat dit veld leeg: <input name="bot-field" /></label>
   </p>
+
+  <Input name="name" placeholder="Uw naam" required />
+  <Input type="email" name="email" placeholder="Uw email" required />
+  <Input type="tel" name="phone" placeholder="Uw telefoonnummer" required />
+  <Textarea name="message" placeholder="Uw vraag" required rows={6} />
+
+  <Button type="submit" className="w-full bg-primary text-primary-foreground">
+    Verstuur Bericht
+  </Button>
+</form>
 
   <Input name="name" placeholder="Uw naam" required />
   <Input type="email" name="email" placeholder="Uw email" required />
