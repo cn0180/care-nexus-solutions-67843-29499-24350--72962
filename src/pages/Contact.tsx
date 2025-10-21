@@ -9,12 +9,25 @@ import { toast } from "sonner";
 
 const Contact = () => {
 
-  // Toast laten zien bij submit
-  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Laat Netlify Form eerst POSTen
-    setTimeout(() => {
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // belangrijk: voorkom standaard submit
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString()
+      });
+
       toast.success("Bedankt! Ons team zal spoedig contact met u opnemen.");
-    }, 100); // korte delay zodat Netlify Form eerst submit
+      form.reset(); // maakt het formulier leeg
+    } catch (err) {
+      toast.error("Er ging iets mis bij het versturen. Probeer het later opnieuw.");
+      console.error(err);
+    }
   };
 
   return (
