@@ -144,3 +144,10 @@ const Contact = () => {
 };
 
 export default Contact;
+
+<form name="contact" method="POST" data-netlify="true">
+  <input type="text" name="name" placeholder="Je naam" required />
+  <input type="email" name="email" placeholder="Je e-mailadres" required />
+  <textarea name="message" placeholder="Je bericht" required></textarea>
+  <button type="submit">Verstuur</button>
+</form>
