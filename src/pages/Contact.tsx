@@ -11,10 +11,10 @@ const Contact = () => {
 
   // Toast laten zien bij submit
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // Geen preventDefault, zodat Netlify Form blijft werken
+    // Laat Netlify Form eerst POSTen
     setTimeout(() => {
       toast.success("Bedankt! Ons team zal spoedig contact met u opnemen.");
-    }, 100); // kleine delay zodat Netlify Form eerst submit
+    }, 100); // korte delay zodat Netlify Form eerst submit
   };
 
   return (
@@ -24,6 +24,7 @@ const Contact = () => {
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-7xl space-y-12 animate-fade-in-up">
+
             {/* Header */}
             <div className="space-y-4">
               <h1 className="text-5xl font-bold text-foreground">Contact</h1>
