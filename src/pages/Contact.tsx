@@ -100,7 +100,18 @@ const Contact = () => {
                 <CardTitle className="text-2xl">Stuur een bericht</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-4">
+               <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  onSubmit={handleSubmit}
+  className="space-y-4"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p hidden>
+    <label>Laat dit veld leeg: <input name="bot-field" /></label>
+  </p>
                   <Input
                     placeholder="Uw naam"
                     value={formData.name}
