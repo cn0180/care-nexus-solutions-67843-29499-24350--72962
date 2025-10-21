@@ -105,13 +105,22 @@ const Contact = () => {
   method="POST"
   data-netlify="true"
   netlify-honeypot="bot-field"
-  onSubmit={handleSubmit}
   className="space-y-4"
 >
   <input type="hidden" name="form-name" value="contact" />
   <p hidden>
     <label>Laat dit veld leeg: <input name="bot-field" /></label>
   </p>
+
+  <Input name="name" placeholder="Uw naam" required />
+  <Input type="email" name="email" placeholder="Uw email" required />
+  <Input type="tel" name="phone" placeholder="Uw telefoonnummer" required />
+  <Textarea name="message" placeholder="Uw vraag" required rows={6} />
+
+  <Button type="submit" className="w-full bg-primary text-primary-foreground">
+    Verstuur Bericht
+  </Button>
+</form>
                   <Input
                     placeholder="Uw naam"
                     value={formData.name}
