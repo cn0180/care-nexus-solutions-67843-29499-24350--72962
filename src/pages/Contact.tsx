@@ -5,8 +5,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Shield, Brain } from "lucide-react";
+import { toast } from "sonner";
 
 const Contact = () => {
+
+  // Toast laten zien bij submit
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Geen preventDefault, zodat Netlify Form blijft werken
+    setTimeout(() => {
+      toast.success("Bedankt! Ons team zal spoedig contact met u opnemen.");
+    }, 100); // kleine delay zodat Netlify Form eerst submit
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -91,6 +101,7 @@ const Contact = () => {
                   data-netlify="true"
                   netlify-honeypot="bot-field"
                   className="space-y-4"
+                  onSubmit={handleFormSubmit}
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <p hidden>
